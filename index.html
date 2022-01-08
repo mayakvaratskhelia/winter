@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>winter</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resert.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <!-- <link rel="stylesheet" href="css/.css">
+    <link rel="stylesheet" href="css/.css"> -->
+  </head>
+  <body>
+    <header class="d-header">
+      <div class="nav-block">
+        <div class="logo">
+          <h1>winter</h1>
+        </div>
+        <nav>
+          <ul class="home-block">
+            <li><a href="#" id="home" >Home</a></li>
+            <li><a href="#"id="blog">Blog</a></li>
+            <li><a href="#"id="gallery">Gallery</a></li>
+            <li><a href="#"id="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- header -->
+    <main>
+      <header class="slide">
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/slide1.jpg" style="width:100%">
+  <div class="text">winter</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/slide2.jpg" style="width:100%">
+  <div class="text">winter</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/slide3.jpg" style="width:100%">
+  <div class="text">winter</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+    <!-- SLIDE -->
+      </header>
+      <section class="video">
+       <iframe width="500" height="250" src="https://www.youtube.com/embed/RYbqFgbLfZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="500" height="250" src="https://www.youtube.com/embed/wYzUQpIkZ1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe width="500" height="250" src="https://www.youtube.com/embed/qpWYBx6Yjcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- video -->
+
+      </section>
+      <section class="blog-block">
+        <!-- BLOG -->
+        <div class="col-one">
+          <img src="img/1.jpg" alt="" width="440">
+          <h4><a href="#">Winter Prep Checklist For Your Home</a></h4>
+        </div>
+        <div class="col-one">
+          <img src="img/2.jpg" alt="" width="440">
+          <h4><a href="#">Diminish Drafty Windows this Winter</a></h4>
+        </div>
+        <div class="col-one">
+          <img src="img/3.jpg" alt="" width="440">
+          <h4><a href="#">Keep Your Fireplace Safe this Winter</a></h4>
+        </div>
+      </section>
+    </main>
+    <footer class="d-footer">
+      <div class="Contact">
+        <h4>design by <strong><a href="#">maya</a></strong></h4>
+      </div>
+      <div class="icon">
+        <!-- iconfinder -->
+      </div>
+    </footer>
+    <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+    </script>
+  </body>
+</html>
